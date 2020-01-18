@@ -1,8 +1,9 @@
 import React from 'react';
-import UserTable from "../src/components/Faker/faker";
+import UserTable from "../src/components/Faker/user.jsx";
+import PatientTable from "../src/components/Faker/patients.jsx";
 import './App.css';
 
-import User from "../src/components/Faker/faker2";
+import User from "../src/components/Faker/user.js";
 
 const userrs = [];
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <UserTable users={userrs} />
+      <PatientTable />
     </div>
   );
 }

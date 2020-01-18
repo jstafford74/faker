@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import UserTable from "../src/components/Faker/faker";
 import './App.css';
+
+import User from "../src/components/Faker/faker2";
+
+const userrs = [];
+
+function userr() {
+ 
+  for (let i = 0; i < 15; i++) {
+    userrs[i] = new User();
+    userrs[i].makeUserData();
+  }
+  
+}
+
+userr();
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UserTable users={userrs} />
     </div>
   );
 }
